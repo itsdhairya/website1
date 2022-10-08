@@ -1,0 +1,79 @@
+header {
+    background: rgb(0,0,0);
+    background: linear-gradient(110deg, rgba(43,103,119,1) 70%, #071214 100%);
+    padding: 9% 0 12%;
+    margin: 0 auto!important;
+    height: 90vh;
+  }
+  
+  .header-picture-container {
+    padding: 0 5%;
+    text-align: right;
+  }
+  
+  .header-portfolio-picture {
+    width: 60%;
+    border-radius: 100%;
+  }
+  
+  .header-description-container {
+    padding: 3% 15% 0 0;
+    text-align: left;
+  }
+  
+  .header-name {
+    letter-spacing: 6px;
+    word-spacing: 6px;
+    margin-bottom: 1rem;
+  }
+  
+  .header-tagline {
+    margin: 0;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: hsla(0,0%,100%,0.5);
+  }
+  
+  .header-tagline span {
+    margin: 0 auto;
+    letter-spacing: 2px;
+  }
+  
+  .header-button {
+    margin-top: 5%;
+    text-align: center;
+  }
+  
+  .header-button span {
+    margin: 0 auto;
+    letter-spacing: 2px;
+    background-color: #38889d;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    
+  }
+  
+  .header-button span:hover {
+    background-color: hsla(0,0%,100%,0.5);
+  }
+
+  footer {
+    text-align: center;
+    background-color: #fffbf0;
+    padding: 0.6% 0 0.5%;
+    background-color: rgba(43,103,119);
+    color: hsla(0,0%,100%,0.7);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .row a {
+    color: black;
+  }
+  
+  .row a:hover {
+    color: black;
+  }
+  
+  
