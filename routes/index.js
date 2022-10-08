@@ -1,7 +1,7 @@
 let express = require('express');
 let app = express();
 let createError = require('http-errors');
-
+let router = express.Router();
 
 app.set('view engine', 'ejs');
 
