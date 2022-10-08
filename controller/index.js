@@ -16,5 +16,8 @@ exports.service = function (req, res) {
 
 exports.contactme = function (req, res) {
     res.render("index", { title: "Contact Me" }); 
+}
 
+exports.error = function (req, res) {
+    res.render("index", { title: "Error" }); 
 }

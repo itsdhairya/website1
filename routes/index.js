@@ -51,4 +51,6 @@ router.get("/service", MainController.service);
 
 router.get("/contactme", MainController.contactme);
 
+router.get("/error", MainController.error);
+
 module.exports = router;
