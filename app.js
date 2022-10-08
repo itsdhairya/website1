@@ -1,15 +1,22 @@
+let createError = require('http-error');
+let cookieParser = require('cookie-parser');
+let logger = require('logger');
 const app = require("./server");
+var express = require('express');
+
+let mainRoute = require('./routes/index')
+
 let app = express();
 
-app.set('views', path.join(__dirname, '../views'));
-app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs'); 
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, '../public')));
-app.use('/css', express.static(path.join(__dirname, '../node_modules/bootstrap/dist/css')));
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'node_modules')));
 
 // routes
 app.use('/', indexRouter);

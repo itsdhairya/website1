@@ -1,20 +1,41 @@
 <%- include partials/header -%>
 
 <%- include partials/navbar -%>   
-<body>
-    <header>
-        <%- include partials/header -%>
-    </header>
-    <main> 
-        <div class="container">
-            <div class="col col-md-12">
-                <h2>This is Service Page</h2>
-                <p>This is Service Body</p>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <%- include partials/footer -%>
-    </footer>
-</body>
-</html>
+
+<!-- Services -->
+
+<div id="services">
+    <h1 class="font-weight-normal about-me-hello">Services</h1>
+    <p class="pt-4 pb-3 mt-3 lead font-weight-normal about-me">
+      I can provide services from web development, to desktop development, to data analysis projects. 
+      Below are the languages and tools I have worked closely with in my projects.
+    </p>
+
+    <!-- Table with Languages & Tools -->
+    <div class="languages-container">
+      <h3>Languages and Tools</h3>
+        <p>
+          <table class="table-languages table table-hover table-sm table-dark">
+            <tr>
+              <td>Web Development</td>
+            </tr>
+            <tr>
+              <td>Data Analysis</td>
+
+            </tr>
+            <tr>
+              <td>Desktop Development</td>
+
+            </tr>
+            <tr>
+              <td>Database Development</td>
+            </tr>
+            <tr>
+              <td>Tools</td>
+            </tr>
+          </table>
+        </p>
+    </div>
+</div>
+
+<%- include partials/footer -%>
