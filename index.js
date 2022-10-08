@@ -1,5 +1,7 @@
 let express = require('express');
 let app = express();
+let createError = require('http-errors');
+
 
 app.set('view engine', 'ejs');
 
@@ -24,4 +26,18 @@ app.get('/project', (req, res,)=> {
 app.get('/service', (req, res,)=> { 
     res.render('pages/service')
 });
+
+// module.exports = router
+// catch 404 errors and forward to error handlers
+// app.use(req, res, next) => {
+//     next(new createError.NotFound());
+// }
+
+// // error handler
+// app.use(err, req, res, next) => {
+//     //render the error message
+//     res.status(err.status || 500)
+//     res.render('error.html', {err});
+// }
+
 app.listen(3000);
