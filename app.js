@@ -4,8 +4,6 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session');
-var flash = require('connect-flash');
-var passport = require('passport');
 
 var indexRouter = require('../routes/index');
 var userRouter = require('../routes/user');
@@ -31,10 +29,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use('/css', express.static(path.join(__dirname, '../node_modules/bootstrap/dist/css')));
 
-// Sets up passport
-app.use(flash());
-app.use(passport.initialize());
-app.use(passport.session());
 
 // routes
 app.use('/', indexRouter);
