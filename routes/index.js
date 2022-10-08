@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/', home);
+router.get('/index', home);
 router.get('/about-me', aboutme);
 router.get('/projects', projects);
 router.get('/services', services);
@@ -16,11 +16,11 @@ function home(req, res, next) {
   }
   
   function projects(req, res, next) {
-    res.render('projects', {});
+    res.render('project', {});
   }
   
   function services(req, res, next) {
-    res.render('services', {});
+    res.render('service', {});
   }
   
   function contactme(req, res, next) {
