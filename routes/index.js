@@ -39,28 +39,16 @@ var router = express.Router();
 
 let MainController = require('../controller/index');
 
-router.get("/", function (req, res, next) {
-  res.render("index", { title: "Home" });
-});
+router.get("/", MainController.home);
 
-router.get("/index", function (req, res, next) {
-  res.render("index", { title: "Home" });
-});
+router.get("/index", MainController.home);
 
-router.get("/about", function (req, res, next) {
-  res.render("index", { title: "About me" });
-});
+router.get("/about", MainController.about);
 
-router.get("/project", function (req, res, next) {
-  res.render("index", { title: "Projects" });
-});
+router.get("/project", MainController.project);
 
-router.get("/service", function (req, res, next) {
-  res.render("index", { title: "Services" });
-});
+router.get("/service", MainController.service);
 
-router.get("/contactme", function (req, res, next) {
-  res.render("index", { title: "Contact me" });
-});
+router.get("/contactme", MainController.contactme);
 
 module.exports = router;
