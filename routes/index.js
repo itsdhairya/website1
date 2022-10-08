@@ -1,7 +1,14 @@
 let express = require('express');
-let app = express();
-let createError = require('http-errors');
+// let app = express();
+// let createError = require('http-errors');
 let router = express.Router();
+
+
+router.get('/', controllerIndex.home);
+router.get('/about-me', controllerIndex.aboutme);
+router.get('/projects', controllerIndex.projects);
+
+module.exports = router;
 
 // app.set('view engine', 'ejs');
 
