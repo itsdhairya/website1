@@ -4,9 +4,9 @@ let express = require('express');
 let router = express.Router();
 
 
-router.get('/', controllerIndex.home);
-router.get('/about-me', controllerIndex.aboutme);
-router.get('/projects', controllerIndex.projects);
+router.get('/', pages.home);
+router.get('/about-me', pages.about);
+router.get('/projects', pages.project);
 
 module.exports = router;
 
