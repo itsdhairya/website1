@@ -1,4 +1,3 @@
-var configDB = require('./config/db');
 var app = require('./config/app');
 
 var server = http.createServer(app);
