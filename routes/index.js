@@ -2,12 +2,14 @@ let express = require('express');
 // let app = express();
 // let createError = require('http-errors');
 let router = express.Router();
+let controllerIndex = require('../controllers/index');
 
 
-router.get('/', pages.home);
-router.get('/about-me', pages.about);
-router.get('/projects', pages.project);
-
+router.get('/', controllerIndex.home);
+router.get('/about-me', controllerIndex.aboutme);
+router.get('/projects', controllerIndex.projects);
+router.get('/services', controllerIndex.services);
+router.get('/contact-me', controllerIndex.contactme);
 module.exports = router;
 
 // app.set('view engine', 'ejs');

@@ -7,7 +7,6 @@ var session = require('express-session');
 
 var indexRouter = require('../routes/index');
 var userRouter = require('../routes/user');
-var contactsRouter = require('../routes/contacts');
 
 // Instantiate Express
 var app = express();
@@ -30,9 +29,8 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use('/css', express.static(path.join(__dirname, '../node_modules/bootstrap/dist/css')));
 
 
-// routes
+// routes 
 app.use('/', indexRouter);
-app.use('/contacts', contactsRouter);
 app.use('/user', userRouter);
 
 // catch 404 and forward to error handler
