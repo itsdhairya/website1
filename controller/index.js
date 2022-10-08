@@ -16,3 +16,17 @@ exports.projects = function(req, res, next) {
     });
 }
 
+exports.services = function(req, res, next) {
+    res.render('services', { 
+      title: 'Services',
+        });
+}
+
+exports.contactme = function(req, res, next) {
+    res.render('contactme', { 
+      title: 'Contact Me'
+    });
+
+}
+
+
