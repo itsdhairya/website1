@@ -4,6 +4,7 @@ let cookieParser = require('cookie-parser');
 // const app = require("./server");
 var express = require('express');
 let path = require('path');
+var port = 3000;
 
 let mainRoute = require('./routes/index')
 
@@ -37,7 +38,11 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render('error',);
 });
+
+app.listen(port, function(){
+  console.log('Server Active on', port);
+}); 
 
 module.exports = app;

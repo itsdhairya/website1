@@ -1,23 +1,20 @@
-<!-- <%- include partials/header.ejs %> <% include partials/footer.ejs %> -->
+<%- include('partials/header.ejs'); %> <%- include('partials/navbar.ejs'); %>
 
-<%- include partials/header -%>
-
-<%- include partials/navbar -%>   
-
-    <div class="header overflow-hidden px-1 my-md-1" id="header">
-        <div class="row">
-
-            <div rowspan=2 class="header-picture-container col-5">
-              <img class="header-portfolio-picture border-0" src="images/logo.png" />
-            </div>
-
-            <div class="header-description-container col-7">
-              <h1 class="display-4 font-weight-normal header-name">Hi its Dhairya Brahmbhatt </h1>
-              <p class="lead font-weight-normal header-tagline"><span>A Computer engineer / Data Analyst / Software Developer</span></p>
-              </div>
-        </div>
+<div class="header overflow-hidden px-1 my-md-1" id="header">
+  <div class="row">
+    <div rowspan="2" class="header-picture-container col-5">
+      <img class="header-portfolio-picture border-0" src="images/logo.png" />
     </div>
 
-    <%- include partials/footer -%>
+    <div class="header-description-container col-7">
+      <h1 class="display-4 font-weight-normal header-name">
+        Hi its Dhairya Brahmbhatt
+      </h1>
+      <p class="lead font-weight-normal header-tagline">
+        <span>A Computer engineer / Data Analyst / Software Developer</span>
+      </p>
+    </div>
+  </div>
+</div>
 
-  <%- include partials/footer -%>
+<%- include('./partials/footer.ejs') %>

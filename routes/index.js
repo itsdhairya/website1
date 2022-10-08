@@ -41,9 +41,9 @@ let MainController = require('../controller/index');
 
 router.get("/", MainController.home);
 
-router.get("/index", MainController.home);
+router.get("views/index", MainController.home);
 
-router.get("/about", MainController.about);
+router.get("views/about", MainController.about);
 
 router.get("/project", MainController.project);
 
