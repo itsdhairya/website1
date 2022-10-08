@@ -8,18 +8,20 @@ let mainRoute = require('./routes/index')
 
 let app = express();
 
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, './views'));
 app.set('view engine', 'ejs'); 
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+//for static files only
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
 
 // routes
-app.use('/', indexRouter);
+app.use('/', mainRoute););
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
