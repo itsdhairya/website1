@@ -5,9 +5,9 @@ let MainController = require("../controller/index");
 
 router.get("/", MainController.home);
 router.get("/index", MainController.home);
-router.get("/about-me", MainController.about);
+router.get("/about", MainController.about);
 router.get("/project", MainController.project);
 router.get("/service", MainController.service);
-router.get("/contact-me", MainController.contact);
+router.get("/contact", MainController.contact);
 
 module.exports = router;
