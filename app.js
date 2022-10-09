@@ -8,6 +8,7 @@ let path = require("path");
 let mainRoute = require("./routes/index");
 
 var app = express();
+var indexRouter = require('./routes/index');
 
 // app.set("views", path.join(__dirname, "./views"));
 app.set("view engine", "ejs");
