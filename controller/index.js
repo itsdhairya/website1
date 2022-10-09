@@ -18,6 +18,6 @@ exports.contactme = function (req, res) {
     res.render("index", { title: "Contact Me" }); 
 }
 
-exports.error = function (req, res) {
-    res.render("index", { title: "Error" }); 
-}
+// exports.error = function (req, res) {
+//     res.render("index", { title: "Error" }); 
+// }
