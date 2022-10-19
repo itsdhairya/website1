@@ -18,6 +18,8 @@ router.get('/project', function(req, res, next) {
 router.get('/about', function(req, res, next) {
   res.render('about', { title: 'About' });
 });
+router.get('/', controlerIndex.home);
+
 
 
 module.exports = router;
