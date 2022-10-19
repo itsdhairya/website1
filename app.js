@@ -1,22 +1,38 @@
-let createError = require("http-errors");
-let cookieParser = require("cookie-parser");
-// let logger = require('logger');
-// const app = require("./server");
-var express = require("express");
-let path = require("path");
-
-let mainRoute = require("./routes/index");
-
+let createError = require('http-errors');
+let express = require('express');
+let path = require('path');
+let cookieParser = require('cookie-parser');
+let logger = require('morgan');
+let compress = require('compression');
+let bodyParser = require('body-parser');
+let methodOverride = require('method-override');
+let session = require('express-session');
+let flash = require('connect-flash');
+let passport = require('passport');
 var app = express();
 var indexRouter = require('./routes/index');
 
-// app.set("views", path.join(__dirname, "./views"));
+
+let indexRouter = require('../routes/index');
+let usersRouter = require('../routes/users');
+
+app.set("views", path.join(__dirname, "../views"));
 app.set("view engine", "ejs");
 
 // app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static(path.join(__dirname, '../node_modules')));
+
+// Sets up passport
+app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
 
 //for static files only
 app.use(express.static(path.join(__dirname, "public")));
@@ -43,4 +59,4 @@ app.use(function (err, req, res, next) {
 
 app.listen(process.env.PORT || 4000)
 
-// module.exports = app;
+module.exports = app;
